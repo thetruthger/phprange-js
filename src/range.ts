@@ -1,4 +1,4 @@
-//@ts-check
+// @ts-check
 /**
  * Inclusive range function that starts with `min` and goes in `stepsize`. The highest number will be the minimum plus the greatest multiple of the stepsize to be less OR EQUAL to max
  * @param min The starting value of the range
@@ -6,7 +6,7 @@
  * @param stepsize The Stepsize of the resulting array
  * @returns {number[]} an array of numbers representing the range values
  */
- export const inclusive_range = (min:number,max:number,stepsize:number=1):number[] =>
+ export const inclusiveRange = (min:number,max:number,stepsize:number=1):number[] =>
  [
      ...Array(
          Math.ceil(
@@ -21,13 +21,13 @@
 
 
 /**
-* Exclusive range function that starts with `min` and goes in `stepsize`. The highest number will be the minimum plus the greatest multiple of the stepsize to be LESS than max
-* @param infimum The starting value of the range
-* @param supremum The smallest possible value AFTER the highest value of the range (exclusive maximum)
-* @param stepsize The Stepsize of the resulting array
-* @returns {number[]} an array of numbers representing the range values
-*/
-export const exclusive_range = (infimum:number,supremum:number,stepsize:number=1):number[] =>
+ * Exclusive range function that starts with `min` and goes in `stepsize`. The highest number will be the minimum plus the greatest multiple of the stepsize to be LESS than max
+ * @param infimum The starting value of the range
+ * @param supremum The smallest possible value AFTER the highest value of the range (exclusive maximum)
+ * @param stepsize The Stepsize of the resulting array
+ * @returns {number[]} an array of numbers representing the range values
+ */
+export const exclusiveRange = (infimum:number,supremum:number,stepsize:number=1):number[] =>
 [
     ...Array(
         Math.ceil(
@@ -42,18 +42,18 @@ export const exclusive_range = (infimum:number,supremum:number,stepsize:number=1
 
 
 /**
-* Range function that starts with `start` and goes in `stepsize`. The resulting array will contain `count` elements
-* @param start The starting value of the range
-* @param count The number of elements
-* @param stepsize The Stepsize of the resulting array
-* @returns {number[]} an array of numbers representing the range values
-*/
-export const counted_range = (start:number,count:number,stepsize:number=1):number[] =>
+ * Range function that starts with `start` and goes in `stepsize`. The resulting array will contain `count` elements
+ * @param start The starting value of the range
+ * @param count The number of elements
+ * @param stepsize The Stepsize of the resulting array
+ * @returns {number[]} an array of numbers representing the range values
+ */
+export const countedRange = (start:number,count:number,stepsize:number=1):number[] =>
 [ ...Array(count).keys() ]
 .map(
     x => stepsize*x + start
 );
 
-export const range = inclusive_range;
+export const range = inclusiveRange;
 
-export default {inclusive_range, exclusive_range, counted_range, range};
+export default {inclusiveRange, exclusiveRange, countedRange, range};

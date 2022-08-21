@@ -1,11 +1,24 @@
 {
   "name": "range-js",
   "version": "1.0.0",
-  "description": "Range-Function with min,max and stepsize",
+  "description": "Inclusive and exclusive Range-Functions with min,max and stepsize",
+  "files": [
+    "lib/range.js",
+    "lib/range.js.map",
+    "lib/range.d.ts"
+  ],
+  "types": "lib/range.d.ts",
   "main": "lib/range.js",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --config jestconfig.json",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "git add -A",
+    "postversion": "git push && git push --tags"
   },
   "keywords": [
     "range",
@@ -14,10 +27,19 @@
     "min",
     "max"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@webgit.de/lib/rangejs.git"
+  },
   "author": "Michael Reinhardt",
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^28.1.7",
+    "jest": "^28.1.3",
+    "prettier": "^2.7.1",
+    "ts-jest": "^28.0.8",
     "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.7.4"
   }
 }
