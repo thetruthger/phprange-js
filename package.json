@@ -2,8 +2,9 @@
   "name": "range-js",
   "version": "1.0.0",
   "description": "Range-Function with min,max and stepsize",
-  "main": "index.js",
+  "main": "lib/range.js",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
