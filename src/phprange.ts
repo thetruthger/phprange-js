@@ -6,7 +6,7 @@
  * @param {number} stepsize The Stepsize of the resulting array
  * @returns {number[]} an array of numbers representing the range values
  */
-export const inclusiveRange = (min:number,max:number,stepsize:number=1):number[] =>
+export const range = (min:number,max:number,stepsize:number=1):number[] =>
 [
     ...Array(
         Math.ceil(
@@ -55,5 +55,5 @@ export const countedRange = (start:number,count:number,stepsize:number=1):number
 );
 
 
-export const range = inclusiveRange;
+export const inclusiveRange = range;
 export default {range, inclusiveRange, exclusiveRange, countedRange};

@@ -5,7 +5,7 @@
  * @param {number} stepsize The Stepsize of the resulting array
  * @returns {number[]} an array of numbers representing the range values
  */
-export declare const inclusiveRange: (min: number, max: number, stepsize?: number) => number[];
+export declare const range: (min: number, max: number, stepsize?: number) => number[];
 /**
  * Exclusive range function that starts with `min` and goes in `stepsize`. The highest number will be the minimum plus the greatest multiple of the stepsize to be LESS than max
  * @param {number} infimum The starting value of the range
@@ -22,7 +22,7 @@ export declare const exclusiveRange: (infimum: number, supremum: number, stepsiz
  * @returns {number[]} an array of numbers representing the range values
  */
 export declare const countedRange: (start: number, count: number, stepsize?: number) => number[];
-export declare const range: (min: number, max: number, stepsize?: number) => number[];
+export declare const inclusiveRange: (min: number, max: number, stepsize?: number) => number[];
 declare const _default: {
     range: (min: number, max: number, stepsize?: number) => number[];
     inclusiveRange: (min: number, max: number, stepsize?: number) => number[];
