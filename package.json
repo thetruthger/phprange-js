@@ -1,6 +1,6 @@
 {
   "name": "phprange",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Inclusive and exclusive Range-Functions with min,max and stepsize like the one in PHP",
   "files": [
     "lib/phprange.js",
