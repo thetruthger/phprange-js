@@ -1,14 +1,14 @@
 {
-  "name": "range-js",
+  "name": "phprange",
   "version": "1.0.0",
-  "description": "Inclusive and exclusive Range-Functions with min,max and stepsize",
+  "description": "Inclusive and exclusive Range-Functions with min,max and stepsize like the one in PHP",
   "files": [
-    "lib/range.js",
-    "lib/range.js.map",
-    "lib/range.d.ts"
+    "lib/phprange.js",
+    "lib/phprange.js.map",
+    "lib/phprange.d.ts"
   ],
-  "types": "lib/range.d.ts",
-  "main": "lib/range.js",
+  "types": "lib/phprange.d.ts",
+  "main": "lib/phprange.js",
   "scripts": {
     "build": "tsc",
     "test": "jest --config jestconfig.json",
@@ -29,7 +29,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@webgit.de/lib/rangejs.git"
+    "url": "git+https://webgit.de/lib/phprange-js.git"
   },
   "author": "Michael Reinhardt",
   "license": "MIT",
