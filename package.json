@@ -29,7 +29,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://webgit.de/lib/phprange-js.git"
+    "url": "git+https://github.com/thetruthger/phprange-js.git"
   },
   "author": "Michael Reinhardt",
   "license": "MIT",
